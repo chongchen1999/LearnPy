@@ -2,31 +2,27 @@ import turtle
 
 # Set up the screen
 screen = turtle.Screen()
-screen.setup(width=400, height=200)
+screen.bgcolor("white")
+
+# Create a turtle object
+olympic_ring = turtle.Turtle()
+olympic_ring.speed(3)
 
 # Function to draw a ring
 def draw_ring(x, y, color):
-    turtle.penup()
-    turtle.goto(x, y)
-    turtle.pendown()
-    turtle.color(color)
-    turtle.width(5)
-    turtle.circle(50)
+    olympic_ring.penup()
+    olympic_ring.goto(x, y)
+    olympic_ring.pendown()
+    olympic_ring.color(color)
+    olympic_ring.circle(50)
 
-# Draw Olympic rings
-colors = ["blue", "yellow", "black", "green", "red"]
-positions = [
-    (-150, -50),   # Blue
-    (-75, 0),      # Yellow
-    (0, -50),      # Black
-    (75, 0),       # Green
-    (150, -50)     # Red
-]
+# Draw the Olympic rings
+draw_ring(-120, 0, "blue")
+draw_ring(0, 0, "black")
+draw_ring(120, 0, "red")
+draw_ring(-60, -60, "yellow")
+draw_ring(60, -60, "green")
 
-# Draw each ring
-for color, pos in zip(colors, positions):
-    draw_ring(pos[0], pos[1], color)
-
-# Hide the turtle and keep the window open
-turtle.hideturtle()
-screen.mainloop()
+# Hide the turtle and display the result
+olympic_ring.hideturtle()
+turtle.done()
