@@ -12,3 +12,6 @@ def list_basic():
 
 a = [x * 2 for x in range(20) if x % 3 == 1]
 print(a)
+
+a[0] = 0
+print(a)
