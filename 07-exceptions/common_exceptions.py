@@ -10,7 +10,6 @@ def handle_file_not_found():
     else:
         print("File content:")
         print(content)
-        file.close()
     finally:
         print("Execution complete.")
 
