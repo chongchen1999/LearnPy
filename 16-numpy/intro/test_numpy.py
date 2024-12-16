@@ -16,3 +16,6 @@ for i in range(len(a)):
 print(a)
 print(id(a))
 print(type(a))
+
+a = np.array(a)
+print(np.sqrt(a))
