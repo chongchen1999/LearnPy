@@ -2,14 +2,10 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-
 for path in sys.path:
     print(path)
 
-# from library import books, members, transactions
-import library.books as books
-import library.members as members
-import library.transactions as transactions
+from library import books, members, transactions
 
 # Using the books module
 books.add_book("1984", "George Orwell")
