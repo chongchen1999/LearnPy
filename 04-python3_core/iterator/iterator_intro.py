@@ -6,3 +6,6 @@ for temp in nums:
 name = "Python"
 for temp in name:
     print(temp)
+
+for x in {11:22, "String": 3, (1, 2, "string_"): 3}:
+    print(x)
