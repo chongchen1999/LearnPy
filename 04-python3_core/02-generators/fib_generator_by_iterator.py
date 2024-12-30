@@ -26,9 +26,4 @@ if __name__ == '__main__':
         print(i, end = ' ')
     print()
 
-    fib = FibGenerator(100, 156, 2365441)
-    for i in fib:
-        print(i, end = ' ')
-    print()
-
-    time.sleep(1)
+    print(type(fib))
