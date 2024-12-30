@@ -15,6 +15,9 @@ def fib_generator():
     return 'Done'
 
 gen = fib_generator()
+gen2 = (x for x in range(5))
+print(type(gen))
+print(type(gen2))
 
 for x in gen:
     print(x)
