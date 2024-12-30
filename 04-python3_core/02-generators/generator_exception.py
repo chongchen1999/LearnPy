@@ -15,8 +15,6 @@ def fib_generator():
     return 'Done'
 
 gen = fib_generator()
-print(next(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
+
+for x in gen:
+    print(x)
