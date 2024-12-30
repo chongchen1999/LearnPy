@@ -1,3 +1,5 @@
+from collections.abc import Iterable, Iterator
+
 class MyList(object):
     def __init__(self):
         self.data = []
@@ -19,11 +21,13 @@ class MyList(object):
         
 if __name__ == '__main__':
     mylist = MyList()
-    for i in range(5):
-        mylist.add_item(i)
+    mylist.add_item("Stringdd")
+    mylist.add_item(123)
+    mylist.add_item(3.14)
+    mylist.add_item([1, 2, 3])
     
-    print('mylist is iterable?', hasattr(mylist, '__iter__'))
-    print('mylist is iterator?', hasattr(mylist, 'next'))
+    print('mylist is iterable?', isinstance(mylist, Iterable))
+    print('mylist is iterator?', isinstance(mylist, Iterator))
     
-    for x in mylist:
-        print(x)
+
+    print(list(mylist))
