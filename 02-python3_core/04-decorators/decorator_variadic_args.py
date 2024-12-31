@@ -10,6 +10,7 @@ def universal_decorator(func):
 @universal_decorator
 def a(num):
     print('a: ', num)
+    return 100
 
 @universal_decorator
 def b(num, num2):
@@ -19,6 +20,6 @@ def b(num, num2):
 def c(num, num2, num3):
     print('c: ', num, num2, num3)
 
-a(1)
+print(a(1))
 b(2, 3)
 c(4, 5, 6)
