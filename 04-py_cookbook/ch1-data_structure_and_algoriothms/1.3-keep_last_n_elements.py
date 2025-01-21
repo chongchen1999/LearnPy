@@ -22,3 +22,8 @@ if __name__ == '__main__':
                 print("Previous line: ", pline, end='')
             print("This line: ", line, end='')
             print('-'*20)
+
+    q = deque(maxlen = 3)
+    for i in range(5):
+        q.append(i)
+        print(q)
